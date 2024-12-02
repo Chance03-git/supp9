@@ -1,4 +1,16 @@
 def integrate_linear_function(m, c, lower_bound, upper_bound):
+    """
+    Integrates a linear function f(x) = mx + c over a specified range.
+
+    Args:
+        m (float): The slope of the linear function.
+        c (float): The y-intercept of the linear function.
+        lower_bound (float): The lower bound of integration.
+        upper_bound (float): The upper bound of integration.
+
+    Returns:
+        float: The definite integral of the linear function over the specified range.
+    """
     # Antiderivative of mx + c is (m/2)x^2 + cx
     def antiderivative(x):
         return (m / 2) * x**2 + c * x
