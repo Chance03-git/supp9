@@ -1,4 +1,13 @@
 import numpy as np
+def generate_normal_samples(mean, std_dev, num_samples):
+    if num_samples <= 0:
+        raise ValueError("Number of samples must be a positive integer.")
+    if std_dev < 0:
+        raise ValueError("Standard deviation must be non-negative.")
+    
+    samples = np.random.normal(mean, std_dev, num_samples)
+    return samples.tolist()
+
 # Test cases
 if __name__ == "__main__":
     # Test 1: Generate 5 samples with mean 0 and standard deviation 1
