@@ -1,5 +1,17 @@
 import numpy as np
 def generate_normal_samples(mean, std_dev, num_samples):
+    """
+    Generates a specified number of samples from a normal distribution with
+    a given mean and standard deviation.
+
+    Args:
+        mean (float): The mean of the normal distribution.
+        std_dev (float): The standard deviation of the normal distribution.
+        num_samples (int): The number of samples to generate.
+
+    Returns:
+        list: A list of samples from the specified normal distribution.
+    """
     if num_samples <= 0:
         raise ValueError("Number of samples must be a positive integer.")
     if std_dev < 0:
