@@ -1,3 +1,10 @@
+def integrate_linear_function(m, c, lower_bound, upper_bound):
+    # Antiderivative of mx + c is (m/2)x^2 + cx
+    def antiderivative(x):
+        return (m / 2) * x**2 + c * x
+
+    # Calculate the definite integral
+    return antiderivative(upper_bound) - antiderivative(lower_bound)
 # Test cases
 if __name__ == "__main__":
     # Test 1: Integrating f(x) = 2x + 3 from 0 to 2
